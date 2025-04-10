@@ -5,7 +5,7 @@ type Props = {
 
 export function Square({value, onSquareClick} : Props)  {
     return (
-        <button className="square" onClick={onSquareClick}>
+        <button className="bg-white size-12" onClick={onSquareClick}>
             {value}
         </button>
     );
