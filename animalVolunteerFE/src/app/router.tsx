@@ -8,12 +8,20 @@ export const router = createBrowserRouter([
         element: <RootLayout/>,
         children: [
             {
-                path: "pets",
-                element: <div>Pets</div>
+                path: "login",
+                element: <div>Login Page</div>
             },
             {
-                path: "page2",
-                element: <div>Page2</div>
+                path: "registration",
+                element: <div>registration</div>
+            },
+            {
+                path: "volunteers",
+                element: <div>volunteers</div>
+            },
+            {
+                path: "profile",
+                element: <div>profile</div>
             },
             {
                 path: "tic-tac",

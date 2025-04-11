@@ -1,18 +1,25 @@
-import {AppBar, Box, Button} from "@mui/material";
+import {AppBar, Box, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
+import paw from "../assets/paw-icon.svg"
+import profile from "../assets/profile.svg"
 
 export function Header() {
     return (
         <Box sx={{flexGrow: 1}}>
-            <AppBar position="static">
-                <div className="flex flex-row items-center justify-between py-2 px-3">
-                    <div className="flex flex-row gap-4 items-center justify-center">
-                        <NavLink to="/" className="text-2xl pr-5">AnimalVolunteer</NavLink>
-                        <NavLink to="pets">Pets</NavLink>
-                        <NavLink to="page2">Страница 2</NavLink>
-                        <NavLink to="tic-tac">Tic-Tac</NavLink>
+            <AppBar position="static" sx={{bgcolor: 'primary.main', color: 'primary.contrastText'}}>
+                <div className="flex items-center justify-between px-4">
+                    <NavLink to="/">
+                        <Box component="img" sx={{ height: 31, '&': {filter: 'invert(100%)'}}} alt="Logo" src={paw} />
+                    </NavLink>
+                        <Typography variant="h6" align="center" className="absolute left-1/2 transform -translate-x-1/2">
+                            AnimalVolunteer
+                        </Typography>
+                    <div className="flex gap-4 items-center">
+                    <NavLink to="tic-tac">Tic-Tac</NavLink>
+                    <NavLink to="profile">
+                        <Box component="img" sx={{ height: 44, '&': {filter: 'invert(100%)'}}} alt="Profile" src={profile} />
+                    </NavLink>
                     </div>
-                    <Button color="inherit">Login</Button>
                 </div>
             </AppBar>
         </Box>
