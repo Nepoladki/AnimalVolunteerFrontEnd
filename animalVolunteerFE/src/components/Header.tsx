@@ -2,6 +2,7 @@ import {AppBar, Box, Typography} from "@mui/material";
 import {NavLink} from "react-router-dom";
 import paw from "../assets/paw-icon.svg"
 import profile from "../assets/profile.svg"
+import logout from "../assets/logout.svg"
 
 export function Header() {
     return (
@@ -15,9 +16,11 @@ export function Header() {
                             AnimalVolunteer
                         </Typography>
                     <div className="flex gap-4 items-center">
-                    <NavLink to="tic-tac">Tic-Tac</NavLink>
                     <NavLink to="profile">
                         <Box component="img" sx={{ height: 44, '&': {filter: 'invert(100%)'}}} alt="Profile" src={profile} />
+                    </NavLink>
+                    <NavLink to="logout">
+                        <Box component="img" sx={{ height: 25, '&': {filter: 'invert(100%)'}}} alt="Logout" src={logout} />
                     </NavLink>
                     </div>
                 </div>

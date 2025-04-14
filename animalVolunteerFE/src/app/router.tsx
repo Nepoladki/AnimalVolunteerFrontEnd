@@ -21,7 +21,12 @@ export const router = createBrowserRouter([
             },
             {
                 path: "profile",
-                element: <div>profile</div>
+                element: <>
+                    <div>profile</div>
+                    <div>profile</div>
+                    <div>profile</div>
+                    <div>profile</div>
+                </>
             },
             {
                 path: "tic-tac",

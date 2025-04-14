@@ -9,7 +9,6 @@ export function MainNavigation() {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
 
-        // Navigate to the corresponding route
         switch (newValue) {
             case 0:
                 navigate("/");
